@@ -43,7 +43,7 @@ EOF
 " Set toggle_comment {{{
 augroup comment_set_group
     autocmd!
-    autocmd FileType c,cpp,java,scala,trace let b:comment_leader = '// '
+    autocmd FileType c,cpp,java,scala,trace,javascript let b:comment_leader = '// '
     autocmd FileType sh,ruby,python   let b:comment_leader = '# '
     autocmd FileType conf,fstab,yaml  let b:comment_leader = '# '
     autocmd FileType tex              let b:comment_leader = '% '
@@ -54,4 +54,3 @@ augroup END
 vmap <silent> // :python3 toggle_comment('v')<CR>
 nmap <silent> // :python3 toggle_comment('n')<CR>
 " }}}
-
